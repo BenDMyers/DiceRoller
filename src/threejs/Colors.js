@@ -1,0 +1,10 @@
+export const PINK = '#ef5777';
+export const RED = '#f53b57';
+export const LIGHT_ORANGE = '#ffc048';
+export const ORANGE = '#ff3f34';
+export const YELLOW = '#ffdd59';
+export const GREEN = '#0be881';
+export const TEAL = '#05c46b';
+export const TURQUOISE = '#34e7e4';
+export const BLUE = '#4bcffa';
+export const PURPLE = '#575fcf';
