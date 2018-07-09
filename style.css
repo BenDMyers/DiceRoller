@@ -1,0 +1,140 @@
+html, body {
+    margin: 0px;
+    background-color: #485460;
+    max-width: 100% !important;
+}
+
+.quick-roll-table {
+    width: 100%;
+    max-width: 100% !important;
+}
+
+.die-button {
+    overflow: hidden;
+    text-align: center;
+    box-shadow: 2px 5px 8px #222, -2px -1px 1px #222;
+    padding-bottom: 30px;
+    transition: 0.3s;
+}
+
+.die-button:hover {
+    cursor: pointer;
+    background-color: #586470;
+    box-shadow: 2px 5px 20px #222, -2px -5px 20px #222;
+}
+
+.die-button-label {
+    font-size: 200%;
+    color: #d2dae2;
+    font-family: 'Exo 2', sans-serif;
+    font-weight: 700;
+}
+
+.die-button-label:hover {
+    cursor: pointer;
+}
+
+.roll-input-div {
+    padding: 0;
+    width: 100%;
+    box-shadow: '2px 5px 8px #222';
+}
+
+.roll-input {
+    box-sizing: border-box;
+    width: 100%;
+    border-top-right-radius: 0px;
+    border-bottom-right-radius: 0px;
+    box-shadow: 0px 5px 4px -2px #222, 0px -5px 8px -2px #222;
+    background-color: #283440;
+    padding: 12px 20px;
+    border: 1px solid #333;
+    color: #d2dae2;
+    font-family: 'Exo 2', sans-serif;
+    font-size: 200%;
+}
+
+.roll-input::placeholder {
+    color: #d2dae211;
+    font-style: italic;
+}
+
+.roll-input-validation-error {
+	border: 1px solid red;
+}
+
+.roll-input-button {
+    box-sizing: border-box;
+    border-top-left-radius: 0px;
+    border-bottom-left-radius: 0px;
+    width: 100%;
+    height: 100%;
+    box-shadow: 2px 5px 4px -2px #222, -2px -5px 8px -2px #222;
+    margin: 0px;
+    background-color: #384450;
+    padding: 12px 20px;
+    border: 1px solid #333;
+    color: #d2dae2;
+    font-family: 'Exo 2', sans-serif;
+    font-size: 200%;
+    transition: 0.3s;
+}
+
+.roll-input-button:hover {
+    cursor: pointer;
+    background-color: #586470;
+    box-shadow: 2px 5px 20px #222, -2px -5px 20px #222;
+}
+
+.roll-input-validation-label {
+	color: red;
+	font-family: 'Exo 2', sans-serif;
+	font-style: italic;
+	display: none;
+	padding: 10px 20px;
+}
+
+.roll-table-dark-band {
+	background-color: #384450;
+	transition: 0.3s;
+}
+
+.roll-table-dark-band:hover {
+	background-color: #404C58;
+}
+
+.roll-table-light-band {
+	background-color: #485460;
+	transition: 0.3s;
+}
+
+.roll-table-light-band:hover {
+	background-color: #505C68;
+}
+
+.roll-table-roll-data {
+	width: 90%;
+	color: #d2dae2;
+	font-family: 'Exo 2', sans-serif;
+	font-size: 250%;
+	text-align: center;
+	font-weight: 300;
+}
+
+.roll-table-roll-evaluated {
+	width: 10%;
+	color: #d2dae2;
+	font-family: 'Exo 2', sans-serif;
+	font-size: 500%;
+	text-align: center;
+	font-weight: 700;
+}
+
+.roll-row td {
+	border: 3px solid #333;
+	border-collapse: collapse;
+}
+
+.roll-row:hover {
+	cursor: pointer;
+}
