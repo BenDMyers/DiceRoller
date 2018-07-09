@@ -2,15 +2,15 @@
   "name": "threejs-test",
   "version": "0.1.0",
   "private": true,
+  "homepage": "http://BenDMyers.github.io/DiceRoller",
   "dependencies": {
     "cannon": "^0.6.2",
     "owlbear": "^0.1.0",
     "react": "^16.4.1",
     "react-dom": "^16.4.1",
     "react-redux": "^5.0.7",
-    "react-scripts": "1.1.4",
+    "react-scripts": "2.0.0-next.3e165448",
     "redux": "^4.0.0",
-    "redux-form": "^7.4.2",
     "three": "^0.94.0",
     "threejs-dice": "^1.0.3"
   },
@@ -18,9 +18,22 @@
     "start": "react-scripts start",
     "build": "react-scripts build",
     "test": "react-scripts test --env=jsdom",
-    "eject": "react-scripts eject"
+    "eject": "react-scripts eject",
+    "deploy": "npm run build && gh-pages -d build"
   },
   "devDependencies": {
     "gh-pages": "^1.2.0"
+  },
+  "browserslist": {
+    "development": [
+      "last 2 chrome versions",
+      "last 2 firefox versions",
+      "last 2 edge versions"
+    ],
+    "production": [
+      ">0.25%",
+      "not op_mini all",
+      "ie 11"
+    ]
   }
 }
