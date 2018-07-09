@@ -18,11 +18,11 @@ class DieButton extends Component {
 	}
 	
 	triggerRoll = () => {
-		const sides = this.props.sides === '%' ? 100 : this.props.sides;
-		const notation = `1d${sides}`
+		const safeSides = this.props.sides === '%' ? 100 : this.props.sides;
+		const notation = `1d${safeSides}`
 		const parsed = parseRollNotation(notation);
 		const rolled = interpretRoll(parsed);
-		this.props.addRoll({rollData: rolled, original: notation})
+		this.props.addRoll({rollData: rolled, original: `1d${this.props.sides}`})
 	}
 
     render() {

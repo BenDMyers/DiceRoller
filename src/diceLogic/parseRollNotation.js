@@ -7,7 +7,6 @@ export default function parseRollNotation(notation) {
 		const parsed = roller.parse(notation);
 		return parsed;
 	} catch(e) {
-		console.error(e)
-		return null;
+		return e;
 	}
 };

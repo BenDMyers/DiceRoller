@@ -1,5 +1,6 @@
 import React, {Component} from 'react';
 import {connect} from 'react-redux';
+import * as actions from '../actions';
 
 class RollTable extends Component {
 	renderRolls() {
@@ -9,9 +10,9 @@ class RollTable extends Component {
 
 		return this.props.rolls.map((roll, index) => {
 			const band = (index % 2 !== this.props.rolls.length % 2) ? 'roll-table-dark-band' : 'roll-table-light-band';
-			console.log('Danger Zone', roll);
+			const rollRowClass = `roll-row ${band}`;
 			return (
-				<tr key={index} className={band}>
+				<tr key={index} className={rollRowClass} onClick={() => this.props.modifyInput(roll.original)}>
 					<td className="roll-table-roll-data">{roll.original}</td>
 					<td className="roll-table-roll-evaluated">{roll.rollData.evaluated}</td>
 				</tr>
@@ -21,7 +22,7 @@ class RollTable extends Component {
 
 	render() {
 		return (
-			<table style={{width: '100%'}}>
+			<table style={{width: '100%', borderCollapse: 'collapse', border: '3px solid #333'}}>
 				<tbody style={{width: '100%'}} className="roll-table">
 					{this.renderRolls()}
 				</tbody>
@@ -34,4 +35,4 @@ function mapStateToProps(state) {
 	return {rolls: state.rolls};
 }
 
-export default connect(mapStateToProps)(RollTable);
+export default connect(mapStateToProps, actions)(RollTable);
