@@ -1,15 +1,7 @@
 import * as THREE from 'three';
-import * as Colors from './Colors';
 import GeneralLights from './GeneralLights';
-// import SceneSubject from './SceneSubject';
-// import Icosahedron from './Icosahedron';
-// import Dodecahedron from './Dodecahedron';
-// import PentagonalTrapezohedron from './PentagonalTrapezohedron';
-// import Octahedron from './Octahedron';
-// import Cube from './Cube';
-import Tetrahedron from './Tetrahedron';
 
-export default (canvas) => {
+export default (canvas, shape, color, ambientColor, strongLightColor, weakLightColor, color2=null) => {
     const clock = new THREE.Clock();
     const origin = new THREE.Vector3(0,0,0);
 
@@ -43,14 +35,17 @@ export default (canvas) => {
     }
 
     function createSceneSubjects(scene) {
+        let newShape;
+        if(color2) {
+            newShape = new shape(scene, 15, color, color2, 0.9);
+        }
+        else {
+            newShape = new shape(scene, 15, color, 0.93)
+        }
+
         const sceneSubjects = [
-            new GeneralLights(scene, 'white', Colors.LIGHT_ORANGE, Colors.YELLOW),
-            // new Icosahedron(scene, 0, Colors.PINK, 0.97),
-            // new Dodecahedron(scene, 0, Colors.ORANGE, 0.97),
-            // new PentagonalTrapezohedron(scene, 15, Colors.PINK, 0.97),
-            // new Octahedron(scene, 15, Colors.PINK, 0.97)
-            // new Cube(scene, 15, Colors.PINK, 0.97)
-            new Tetrahedron(scene, 15, Colors.PINK, 0.97)
+            new GeneralLights(scene, ambientColor, strongLightColor, weakLightColor),
+            newShape
         ];
         return sceneSubjects;
     }

@@ -1,6 +1,6 @@
 import * as THREE from 'three';
 
-export default (radius, materialColor, opacity) => {
+export default (scene, radius, materialColor, opacity) => {
     const group = new THREE.Group();
 
     const geometry = new THREE.OctahedronGeometry(radius);
@@ -19,6 +19,8 @@ export default (radius, materialColor, opacity) => {
 
     group.add(mesh);
     group.add(wireframe);
+
+    scene.add(group);
 
     const speed = 1;
 

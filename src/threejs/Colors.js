@@ -5,6 +5,7 @@ export const ORANGE = '#ff3f34';
 export const YELLOW = '#ffdd59';
 export const GREEN = '#0be881';
 export const TEAL = '#05c46b';
+export const DARK_TEAL = '#005b5b';
 export const TURQUOISE = '#34e7e4';
 export const BLUE = '#4bcffa';
 export const PURPLE = '#575fcf';

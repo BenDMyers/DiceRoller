@@ -27,7 +27,7 @@ export default (scene, radius, materialColor, opacity) => {
         new THREE.LineBasicMaterial()
     );
 
-    // group.add(mesh);
+    group.add(mesh);
     group.add(wireframe);
 
     scene.add(group);

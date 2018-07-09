@@ -9,9 +9,9 @@
 
 import SceneManager from './SceneManager';
 
-export default (containerElement) => {
+export default (containerElement, shape, color, ambientColor, strongLightColor, weakLightColor, color2=null) => {
     const canvas = createCanvas(document, containerElement);
-    const sceneManager = new SceneManager(canvas);
+    const sceneManager = new SceneManager(canvas, shape, color, ambientColor, strongLightColor, weakLightColor, color2);
 
     bindEventListeners();
     render();
@@ -28,10 +28,10 @@ export default (containerElement) => {
     }
 
     function resizeCanvas() {
-        canvas.style.width = '100%';
-        canvas.style.height = '100%';
-        canvas.width = window.innerWidth;
-        canvas.height = window.innerHeight;
+        // canvas.style.width = window.innerWidth/7 + 'px';
+        // canvas.style.height = window.innerHeight/7 + 'px';
+        canvas.width = window.innerWidth/7;
+        canvas.height = window.innerWidth/7 * .8;
         sceneManager.onWindowResize();
     }
 
