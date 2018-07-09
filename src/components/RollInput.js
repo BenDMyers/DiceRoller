@@ -17,6 +17,7 @@ class RollInput extends Component {
 		else {
 			const rolled = interpretRoll(parsed);
 			this.props.addRoll({original: notation, rollData: rolled});
+			document.querySelector('.roll-input').value = '';
 		}
 	};
 

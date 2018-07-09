@@ -8,7 +8,8 @@ class RollTable extends Component {
 		}
 
 		return this.props.rolls.map((roll, index) => {
-			const band = (index % 2 !== this.props.rolls.length % 2) ? 'roll-table-dark-band' : 'roll-table-light-band'
+			const band = (index % 2 !== this.props.rolls.length % 2) ? 'roll-table-dark-band' : 'roll-table-light-band';
+			console.log('Danger Zone', roll);
 			return (
 				<tr key={index} className={band}>
 					<td className="roll-table-roll-data">{roll.original}</td>
