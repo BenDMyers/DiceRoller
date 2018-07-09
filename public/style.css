@@ -91,3 +91,29 @@ html, body {
     background-color: #586470;
     box-shadow: 2px 5px 20px #222, -2px -5px 20px #222;
 }
+
+.roll-table-dark-band {
+	background-color: #384450;
+}
+
+.roll-table-light-band {
+	background-color: #485460;
+}
+
+.roll-table-roll-data {
+	width: 90%;
+	color: #d2dae2;
+	font-family: 'Exo 2', sans-serif;
+	font-size: 250%;
+	text-align: center;
+	font-weight: 300;
+}
+
+.roll-table-roll-evaluated {
+	width: 10%;
+	color: #d2dae2;
+	font-family: 'Exo 2', sans-serif;
+	font-size: 500%;
+	text-align: center;
+	font-weight: 700;
+}

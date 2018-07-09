@@ -1,4 +1,6 @@
 import React, {Component} from 'react';
+import {connect} from 'react-redux';
+import * as actions from '../actions';
 import parseRollNotation from '../diceLogic/parseRollNotation';
 import {interpretRoll} from '../diceLogic/interpretRoll';
 
@@ -13,7 +15,8 @@ class RollInput extends Component {
 		}
 
 		else {
-			interpretRoll(parsed);
+			const rolled = interpretRoll(parsed);
+			this.props.addRoll({original: notation, rollData: rolled});
 		}
 	};
 
@@ -27,4 +30,4 @@ class RollInput extends Component {
     }
 }
 
-export default RollInput;
+export default connect(null, actions)(RollInput);

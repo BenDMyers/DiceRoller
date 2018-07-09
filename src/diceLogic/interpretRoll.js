@@ -1,12 +1,27 @@
 export function interpretRoll(roll) {
-	// const terms = [];
+	const terms = [];
 	roll.forEach((term) => {
 		if(term['die']) {
-			console.log(rollDice(term));
-			// rollDice(term);
+			terms.push(rollDice(term));
 		}
-		else console.log(term);
+		else {terms.push(term)};
 	});
+
+	console.log(terms);
+
+	const toEvaluate = terms.map((term) => {
+		if(term.allRolls) {
+			return term.sum;
+		}
+		else if(term.operator) {
+			return term.operator;
+		}
+		else if(term.constant) {
+			return term.constant;
+		}
+	}).join('');
+
+	return {roll: terms, evaluated: eval(toEvaluate)};
 };
 
 function rollDice(diceTerm) {
