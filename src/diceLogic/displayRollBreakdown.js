@@ -1,12 +1,15 @@
 import React from 'react';
 
-export function displayRollBreakdown({rollData}) {
+export function displayRollBreakdown({rollData, original}) {
 	if(!rollData) {return;}
-	const {roll} = rollData; 
+	const {roll} = rollData;
 	return (
-		<span className='breakdown'>
-			{roll.map((term, index) => breakdownTerm(term, index))}
-		</span>
+		<div>
+			<div className='roll-original'>{original}</div>
+			<span className='breakdown'>
+				{roll.map((term, index) => breakdownTerm(term, index))}
+			</span>
+		</div>
 	);
 }
 
@@ -60,7 +63,7 @@ function dieClasses(term, dieIndex) {
 function breakdownDiceTerm(term) {
 	return term.synthesizedRolls.map((die, index) => {
 		const classList = dieClasses(term, index);
-		const dieSpan = <span key={index} className={classList}> {die}</span>;
+		const dieSpan = <span key={index} className={classList}> {die} </span>;
 		const elementArr = [dieSpan];
 		if(index < term.synthesizedRolls.length - 1) {
 			elementArr.push(<span key={'plus' + index} className='breakdown-operator'>&nbsp;+&nbsp;</span>);

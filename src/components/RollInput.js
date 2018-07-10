@@ -14,6 +14,11 @@ class RollInput extends Component {
 
 	parseRoll = () => {
 		const notation = this.props.inputValue;
+		if(notation.toLowerCase() === 'clear') {
+			this.props.clearHistory();
+			this.props.modifyInput('');
+			return;
+		}
 		const cleansedNotation = notation.split('d%').join('d100');
 		const parsed = parseRollNotation(cleansedNotation);
 
@@ -46,9 +51,10 @@ class RollInput extends Component {
 						<input
 							id="roll-input"
 							className="roll-input"
-							placeholder="3d12 + 2d8 + 10"
+							placeholder="3d12 + 4d8k3 + 10"
 							value={this.props.inputValue}
 							onChange={this.onChangeInput}
+							onKeyPress={this.handleKeyPress}
 						/>
 					</span>
 					<span style={{width: '10%', display: 'inline-block'}}>
@@ -69,6 +75,12 @@ class RollInput extends Component {
 		document.querySelector('.roll-input-validation-label').style.display = 'none';
 		document.querySelector('.roll-input').classList.remove('roll-input-validation-error');
 	}
+
+	handleKeyPress = (event) => {
+		if(event.key === 'Enter') {
+			this.parseRoll();
+		}
+	};
 }
 
 function mapStateToProps(state) {

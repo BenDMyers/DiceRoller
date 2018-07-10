@@ -27,9 +27,8 @@ export default (scene, radius, materialColor, opacity) => {
     function update(time) {
         const angle = time*speed;
         group.rotation.z = -angle;
-        group.rotation.x = angle;
-        // group.rotation.z = -45;
-    }
+		group.rotation.x = angle;
+	}
 
     return {update};
 }

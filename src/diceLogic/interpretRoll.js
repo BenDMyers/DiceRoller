@@ -40,8 +40,20 @@ function rollDice(diceTerm) {
 	return {allRolls, explosions, rerolls, keep, sum, synthesizedRolls, diceTerm};
 }
 
-function generateRoll(sides) {
-	return Math.floor(Math.random() * sides) + 1;
+function generateRoll(sides, replacementAlgorithm) {
+	if(!replacementAlgorithm) {
+		return Math.floor(Math.random() * sides) + 1;
+	}
+	else {
+		switch(replacementAlgorithm) {
+			case 'MIN':
+				return 1;
+			case 'MAX':
+				return sides;
+			case 'AVG':
+				return (1 + sides)/2;
+		}
+	}
 }
 
 function compareByRoll(a, b) {
