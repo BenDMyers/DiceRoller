@@ -11,7 +11,7 @@ import SceneManager from './SceneManager';
 
 export default (containerElement, shape, color, ambientColor, strongLightColor, weakLightColor, color2=null) => {
     const canvas = createCanvas(document, containerElement);
-    const sceneManager = new SceneManager(canvas, shape, color, ambientColor, strongLightColor, weakLightColor, color2);
+    const sceneManager = SceneManager(canvas, shape, color, ambientColor, strongLightColor, weakLightColor, color2);
 
     bindEventListeners();
     render();

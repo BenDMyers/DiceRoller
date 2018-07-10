@@ -37,14 +37,14 @@ export default (canvas, shape, color, ambientColor, strongLightColor, weakLightC
     function createSceneSubjects(scene) {
         let newShape;
         if(color2) {
-            newShape = new shape(scene, 15, color, color2, 0.9);
+            newShape = shape(scene, 15, color, color2, 0.9);
         }
         else {
-            newShape = new shape(scene, 15, color, 0.93)
+            newShape = shape(scene, 15, color, 0.93)
         }
 
         const sceneSubjects = [
-            new GeneralLights(scene, ambientColor, strongLightColor, weakLightColor),
+            GeneralLights(scene, ambientColor, strongLightColor, weakLightColor),
             newShape
         ];
         return sceneSubjects;

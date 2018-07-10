@@ -1,6 +1,7 @@
 import React, {Component} from 'react';
 import {connect} from 'react-redux';
 import * as actions from '../actions';
+import {displayRollBreakdown} from '../diceLogic/displayRollBreakdown';
 
 class RollTable extends Component {
 	renderRolls() {
@@ -9,11 +10,12 @@ class RollTable extends Component {
 		}
 
 		return this.props.rolls.map((roll, index) => {
+			const breakdown = displayRollBreakdown(roll);
 			const band = (index % 2 !== this.props.rolls.length % 2) ? 'roll-table-dark-band' : 'roll-table-light-band';
 			const rollRowClass = `roll-row ${band}`;
 			return (
 				<tr key={index} className={rollRowClass} onClick={() => this.props.modifyInput(roll.original)}>
-					<td className="roll-table-roll-data">{roll.original}</td>
+					<td className="roll-table-roll-data">{breakdown}</td>
 					<td className="roll-table-roll-evaluated">{roll.rollData.evaluated}</td>
 				</tr>
 			);
