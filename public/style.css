@@ -4,10 +4,9 @@ html, body {
     max-width: 100% !important;
 }
 
-.quick-roll {
+.quick-roll-table {
     width: 100%;
-	max-width: 100% !important;
-	height: 200px;
+    max-width: 100% !important;
 }
 
 .die-button {
@@ -15,9 +14,7 @@ html, body {
     text-align: center;
     box-shadow: 2px 5px 8px #222, -2px -1px 1px #222;
     padding-bottom: 30px;
-	transition: 0.3s;
-	padding-bottom: 20%;
-	height: 100%;
+    transition: 0.3s;
 }
 
 .die-button:hover {
@@ -30,8 +27,7 @@ html, body {
     font-size: 200%;
     color: #d2dae2;
     font-family: 'Exo 2', sans-serif;
-	font-weight: 700;
-	margin-bottom: 30px;
+    font-weight: 700;
 }
 
 .die-button-label:hover {
@@ -39,8 +35,7 @@ html, body {
 }
 
 .roll-input-div {
-	/* padding: 0; */
-	margin-top: 30px;
+    padding: 0;
     width: 100%;
     box-shadow: '2px 5px 8px #222';
 }

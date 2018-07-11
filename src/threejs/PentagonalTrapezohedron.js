@@ -2,8 +2,8 @@ import * as THREE from 'three';
 import {DiceManager, DiceD10} from 'threejs-dice';
 import CANNON from 'cannon';
 
-// window.THREE = THREE;
-// window.CANNON = CANNON;
+window.THREE = THREE;
+window.CANNON = CANNON;
 
 export default (scene, radius, materialColor, opacity) => {
     const group = new THREE.Group();

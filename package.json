@@ -5,11 +5,9 @@
   "homepage": "http://BenDMyers.github.io/DiceRoller",
   "dependencies": {
     "cannon": "^0.6.2",
-    "mdbreact": "^4.5.1",
     "owlbear": "^0.1.0",
     "react": "^16.4.1",
     "react-dom": "^16.4.1",
-    "react-modal": "^3.5.1",
     "react-redux": "^5.0.7",
     "react-scripts": "2.0.0-next.3e165448",
     "redux": "^4.0.0",
