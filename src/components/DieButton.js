@@ -26,7 +26,9 @@ class DieButton extends Component {
 	}
 
     render() {
+		// TODO: Convert <a> to <button>
         return (
+			// eslint-disable-next-line
 			<a style={{width: this.state.width, height: this.state.height}} 
 				className="die-button"
 				onClick={this.triggerRoll}

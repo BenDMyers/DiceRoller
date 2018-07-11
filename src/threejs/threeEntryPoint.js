@@ -28,8 +28,6 @@ export default (containerElement, shape, color, ambientColor, strongLightColor, 
     }
 
     function resizeCanvas() {
-        // canvas.style.width = window.innerWidth/7 + 'px';
-        // canvas.style.height = window.innerHeight/7 + 'px';
         canvas.width = window.innerWidth/7;
         canvas.height = window.innerWidth/7 * .8;
         sceneManager.onWindowResize();

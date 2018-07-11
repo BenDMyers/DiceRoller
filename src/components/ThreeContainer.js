@@ -9,11 +9,7 @@ export default class ThreeContainer extends Component {
 
     render() {
         return (
-            <div ref={(element) => {
-                    this.threeRootElement = element;
-                    // console.log(element.childNodes[0]);
-                }
-            }></div>
+            <div ref={(element) => {this.threeRootElement = element;}}></div>
         );
     }
 }

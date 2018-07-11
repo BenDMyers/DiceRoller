@@ -28,7 +28,6 @@ export default (scene, length, materialColor, opacity) => {
         const angle = time*speed;
         group.rotation.z = -angle;
         group.rotation.x = angle;
-        // group.rotation.z = -45;
     }
 
     return {update};

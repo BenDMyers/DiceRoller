@@ -37,7 +37,6 @@ export default (scene) => {
         const angle = time*speed;
         group.rotation.y = angle;
         subjectMaterial.alphaMap.offset.y = 0.55 + time * textureOffsetSpeed;
-        // subjectWireframe.material.color.setHSL( Math.sin(angle*2), 0.5, 0.5 );
         const scale = (Math.sin(angle*8)+6.4)/5;
         subjectWireframe.scale.set(scale, scale, scale)
     }

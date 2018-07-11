@@ -19,8 +19,13 @@ export function interpretRoll(roll) {
 		else if(term.constant) {
 			return term.constant;
 		}
+		else {
+			// You really shouldn't be able to make it here
+			return '';
+		}
 	}).join('');
 
+	// eslint-disable-next-line
 	return {roll: terms, evaluated: eval(toEvaluate)};
 };
 
@@ -52,6 +57,8 @@ function generateRoll(sides, replacementAlgorithm) {
 				return sides;
 			case 'AVG':
 				return (1 + sides)/2;
+			default:
+			return Math.floor(Math.random() * sides) + 1;
 		}
 	}
 }
@@ -119,6 +126,7 @@ function synthesizeRolls(allRolls, explosions, rerolls) {
 	const rolls = [...allRolls];
 
 	if(explosions) {
+		// eslint-disable-next-line
 		explosions.map((explosion, index) => {
 			if(explosion) {
 				rolls[index] = sum(explosion);
@@ -127,6 +135,7 @@ function synthesizeRolls(allRolls, explosions, rerolls) {
 	}
 
 	if(rerolls) {
+		// eslint-disable-next-line
 		rerolls.map((reroll, index) => {
 			if(reroll) {
 				rolls[index] = reroll[reroll.length - 1];
@@ -136,9 +145,3 @@ function synthesizeRolls(allRolls, explosions, rerolls) {
 
 	return rolls;
 }
-
-// Return a version of the roll object with chains of terms with similarly precedented operators clumped
-// function chainByOperator(roll, operators) {
-// 	const ops = operators.split('|');
-
-// }

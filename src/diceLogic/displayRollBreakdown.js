@@ -45,13 +45,13 @@ function dieClasses(term, dieIndex) {
 	if(term.explosions && term.explosions[dieIndex]) {
 		classList.push('breakdown-exploded');
 	}
-	else if(/*(!term.explosions || term.explosions.length < 1) &&*/ (term.allRolls[dieIndex] === term.diceTerm.die.sides)) {
+	else if(term.allRolls[dieIndex] === term.diceTerm.die.sides) {
 		classList.push('breakdown-critical-hit');
 	}
 	if(term.rerolls && term.rerolls[dieIndex]) {
 		classList.push('breakdown-rerolled');
 	}
-	if(term.synthesizedRolls[dieIndex] == 1) {
+	if(term.synthesizedRolls[dieIndex] === 1) {
 		classList.push('breakdown-critical-miss');
 	}
 	if(!term.keep[dieIndex]) {

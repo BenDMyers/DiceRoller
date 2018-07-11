@@ -8,7 +8,6 @@ window.CANNON = CANNON;
 export default (scene, radius, materialColor1, materialColor2, opacity) => {
     const group = new THREE.Group();
 
-    // console.log('threejs-dice', DiceD10.getGeometry);
     const world = new CANNON.World();
     DiceManager.setWorld(world);
 
@@ -59,7 +58,6 @@ export default (scene, radius, materialColor1, materialColor2, opacity) => {
         const angle = time*speed;
         group.rotation.z = -angle;
         group.rotation.x = angle;
-        // group.rotation.z = -45;
     }
 
     return {update};
