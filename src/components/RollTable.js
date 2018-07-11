@@ -9,6 +9,8 @@ class RollTable extends Component {
 			return [];
 		}
 
+		console.log(this.props.rolls);
+
 		return this.props.rolls.map((roll, index) => {
 			const breakdown = displayRollBreakdown(roll);
 			const band = (index % 2 !== this.props.rolls.length % 2) ? 'roll-table-dark-band' : 'roll-table-light-band';

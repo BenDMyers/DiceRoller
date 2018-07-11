@@ -22,7 +22,7 @@ class QuickRoll extends Component {
     render() {
         return (
             // <table className="quick-roll-table"><tbody style={{maxWidth: '100%'}}><tr style={{maxWidth: '100%'}}>
-            <div className="qr" style={{display: 'flex'}}>
+            <div className="quick-roll" style={{display: 'flex'}}>
                 <DieButton sides={4} shape={Tetrahedron} color={Colors.PINK} ambientColor={'white'} strongLightColor={Colors.LIGHT_ORANGE} weakLightColor={Colors.YELLOW}/>
                 <DieButton sides={6} shape={Cube} color={Colors.ORANGE} ambientColor={'white'} strongLightColor={Colors.YELLOW} weakLightColor={Colors.GREEN} />
                 <DieButton sides={8} shape={Octahedron} color={Colors.YELLOW} ambientColor={'white'} strongLightColor={Colors.GREEN} weakLightColor={Colors.TEAL} />
