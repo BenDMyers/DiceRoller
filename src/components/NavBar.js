@@ -1,15 +1,19 @@
 import React, {Component} from 'react';
-import {Navbar, NavbarBrand, NavbarToggler, Collapse, NavItem, NavLink} from 'mdbreact';
+import {Navbar, NavbarBrand, NavbarNav, NavbarToggler, Collapse, NavItem, NavLink} from 'mdbreact';
 
 class NavBar extends Component {
 	render() {
 		return (
 			<Navbar color="elegant-color-dark" dark expand="md" scrolling style={{marginBottom: 0}}>
 				<NavbarBrand ref="/">
-					<img src="../../logo.png" height={30} style={{display: 'inline'}}/>
-					<strong>Dice Roller</strong>
+					<img src="../../logo.png" height={40} style={{display: 'inline', verticalAlign: 'middle'}}/>
+					<span className='navbar-site-name'>Dice Roller</span>
 				</NavbarBrand>
-
+				<NavbarNav right>
+					<NavItem>
+						Help
+					</NavItem>
+				</NavbarNav>
 			</Navbar>
 		);
 	}

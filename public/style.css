@@ -4,6 +4,19 @@ html, body {
     max-width: 100% !important;
 }
 
+.navbar-brand {
+	padding-top: 0;
+}
+
+.navbar-site-name {
+	color: #d2dae2;
+	font-family: 'Exo 2', sans-serif;
+	font-size: 175%;
+	font-weight: 700;
+	padding-left: 10px;
+	vertical-align: middle;
+}
+
 .quick-roll {
     width: 100%;
 	max-width: 100% !important;
